@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-card">
+            <h1>😂 Random Joke Generator</h1>
+            
+            <div class="joke-display">
+                <p id="jokeText" class="joke-text">Click the button to get a joke!</p>
+                <p id="jokeType" class="joke-type"></p>
+            </div>
+
+            <div class="controls">
+                <button id="getJokeBtn" class="btn-primary">Get Random Joke</button>
+                <button id="copyBtn" class="btn-secondary">📋 Copy Joke</button>
+            </div>
+
+            <div class="joke-categories">
+                <h3>Choose Category:</h3>
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="any">All Jokes</button>
+                    <button class="category-btn" data-category="general">General</button>
+                    <button class="category-btn" data-category="programming">Programming</button>
+                    <button class="category-btn" data-category="knock-knock">Knock-Knock</button>
+                </div>
+            </div>
+
+            <div class="joke-type-selector">
+                <h3>Joke Type:</h3>
+                <label>
+                    <input type="radio" name="jokeType" value="single" checked>
+                    Single Liner
+                </label>
+                <label>
+                    <input type="radio" name="jokeType" value="twopart">
+                    Two Part
+                </label>
+                <label>
+                    <input type="radio" name="jokeType" value="any">
+                    Any
+                </label>
+            </div>
+
+            <div class="loading" id="loadingSpinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading joke...</p>
+            </div>
+
+            <div class="joke-history">
+                <h3>Recent Jokes:</h3>
+                <ul id="historyList"></ul>
+                <button id="clearHistoryBtn" class="btn-clear">Clear History</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
